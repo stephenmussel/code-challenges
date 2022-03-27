@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 # About
 
 For practice and learning.
@@ -11,6 +13,7 @@ For practice and learning.
   <ul>
     <li><a href="#fizzbuzz-backwards">FizzBuzz Backwards</a></li>
     <li><a href="#square-every-digit">Square Every Digit</a></li>
+    <li><a href="#code-challenge">Code Challenge</a></li>
   </ul>
 </details>
 <br /><br />
@@ -79,6 +82,8 @@ return [f, b];
 }
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Square Every Digit
 
 Square every digit of a number and concatenate them. For example, if we run 9119 through the function, 811181 will come out. 
@@ -114,3 +119,30 @@ console.log(squareDigits(9119)); // 811181
 console.log(squareDigits(1991)); // 181811
 console.log(squareDigits(-96)); // 8136
 ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Code Challenge
+
+Description goes here...
+<br /><br />
+
+First solution:
+
+```sh
+/**
+ * Description goes here...
+ * @param {*} - 
+ * @param {*} - 
+ * @returns {*} -  
+ */
+```
+
+Refactored solution:
+
+```sh
+Code goes here...
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
