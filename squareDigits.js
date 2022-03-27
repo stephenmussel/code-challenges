@@ -4,7 +4,7 @@
  * @returns {number} -  Integer
  */
 
-const squareNum = num => {
+const squareDigits = num => {
   if(num < 0){
     num = Math.abs(num); // positive integer;
   }
@@ -15,6 +15,6 @@ const squareNum = num => {
   return parseInt(result); // positive integer
   }
   
-console.log(squareNum(9119)); // 811181
-console.log(squareNum(1991)); // 181811
-console.log(squareNum(-96)); // 8136
+console.log(squareDigits(9119)); // 811181
+console.log(squareDigits(1991)); // 181811
+console.log(squareDigits(-96)); // 8136

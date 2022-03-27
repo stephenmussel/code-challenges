@@ -8,9 +8,10 @@ For practice and learning.
 <!-- LIST OF CODE CHALLENGES -->
 <details>
   <summary>List of Code Challenges</summary>
-  <ol>
+  <ul>
     <li><a href="#fizzbuzz-backwards">FizzBuzz Backwards</a></li>
-  </ol>
+    <li><a href="#square-every-digit">Square Every Digit</a></li>
+  </ul>
 </details>
 <br /><br />
 
@@ -78,7 +79,7 @@ return [f, b];
 }
 ```
 
-### Square and Concatenate
+### Square Every Digit
 
 Square every digit of a number and concatenate them. For example, if we run 9119 through the function, 811181 will come out. 
 
@@ -94,18 +95,22 @@ First solution:
  * @returns {number} -  Integer
  */
 
-const squareNum = num => {
+const squareDigits = num => {
   if(num < 0){
     num = Math.abs(num); // positive integer;
   }
 
   // turns number to string then returns array
   // loops thru array and squares each element then joins them
-  let result = num.toString().split('').map(i => i**2).join('');
+  let result = num
+    .toString()
+    .split('')
+    .map(i => i**2)
+    .join('');
   return parseInt(result); // positive integer
   }
   
-console.log(squareNum(9119)); // 811181
-console.log(squareNum(1991)); // 181811
-console.log(squareNum(-96)); // 8136
+console.log(squareDigits(9119)); // 811181
+console.log(squareDigits(1991)); // 181811
+console.log(squareDigits(-96)); // 8136
 ```
