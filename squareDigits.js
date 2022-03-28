@@ -18,3 +18,4 @@ const squareDigits = num => {
 console.log(squareDigits(9119)); // 811181
 console.log(squareDigits(1991)); // 181811
 console.log(squareDigits(-96)); // 8136
+console.log(squareDigits(906)); // 81036

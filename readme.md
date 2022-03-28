@@ -13,6 +13,7 @@ For practice and learning.
   <ul>
     <li><a href="#fizzbuzz-backwards">FizzBuzz Backwards</a></li>
     <li><a href="#square-every-digit">Square Every Digit</a></li>
+    <li><a href="#reverse-words">Reverse Words</a></li>
     <li><a href="#code-challenge">Code Challenge</a></li>
   </ul>
 </details>
@@ -118,6 +119,42 @@ const squareDigits = num => {
 console.log(squareDigits(9119)); // 811181
 console.log(squareDigits(1991)); // 181811
 console.log(squareDigits(-96)); // 8136
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Reverse Words
+
+  Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+  <br /><br />
+
+First solution:
+
+```sh
+/**
+ * Reverse each word in a string and spaces should be retained
+ * @param {string} - String
+ * @returns {string} - String in reverse
+ */
+
+const reverseWords = str => {
+let strArr = str.split(' ').reverse().join(' ')
+let result = []
+
+for(let i = strArr.length - 1; i >= 0 ; i--) {
+    result.push(strArr[i]);
+}
+
+return result.join('');
+};
+
+console.log(reverseWords('This is an example!')); // sihT si na !elpmaxe
+```
+
+Refactored solution:
+
+```sh
+Code goes here...
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
