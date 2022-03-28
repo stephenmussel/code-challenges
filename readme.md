@@ -222,7 +222,26 @@ console.log(factorial(5)); // 120
 Refactored solution:
 
 ```sh
-Code goes here...
+Case for recursion?
+
+const countDown = n => {
+    console.log(n);
+    let newNum = n - 1;
+    if(newNum > 0) {
+        countDown(newNum)
+    }
+}
+
+Recursion applied:
+
+const factorial = n => {
+    if (n < 0 || n > 12) {
+        throw new RangeError();
+    } else if(n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1); 
+}
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
