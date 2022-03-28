@@ -190,9 +190,33 @@ First solution:
  * @returns {number} - Positive integer  
  */
 
- const factorial = n => {
+const factorial = n => {
 
- };
+// !(n >= 0 && n <= 12) throw RangeError
+// take input and count down to 1
+// store those numbers in an array
+// multiply numbers together
+// return result
+
+let result = [];
+
+    if(!(n >= 0 && n<= 12)) {
+        throw new RangeError('The argument must be between 0 and 12.')
+    } else if( n === 0) {
+        result.push(1);
+    }
+    for(let i = n; i >= 1; i--) {
+        result.push(i);
+    }
+
+return result.reduce((a, b) => a * b);
+};
+
+// console.log(factorial(0)); // 1
+console.log(factorial(5)); // 120
+// console.log(factorial(12)); // 479001600
+// console.log(factorial(-1)); // RangeError
+// console.log(factorial(13)); // RangeError
 ```
 
 Refactored solution:
