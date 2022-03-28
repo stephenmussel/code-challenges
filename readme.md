@@ -154,12 +154,22 @@ console.log(reverseWords('This is an example!')); // sihT si na !elpmaxe
 Refactored solution:
 
 ```sh
-Code goes here...
+const reverseWords = str => {
+let strArr = str
+    .split(' ') // returns array of words
+    .map(word => word // loops thru array
+        .split('') // returns array of an array of characters
+        .reverse() // reverses order of characters
+        .join('')) // joins characters to form array of words
+        .join(' '); // joins array of words to form string
+
+return strArr;
+};
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Code Challenge
+### Code Challenge Template
 
 Description goes here...
 <br /><br />
