@@ -15,9 +15,8 @@ For practice and learning.
     <li><a href="#square-every-digit">Square Every Digit</a></li>
     <li><a href="#reverse-words">Reverse Words</a></li>
     <li><a href="#factorial">Factorial</a></li>
+    <li><a href="#high-and-low">High and Low</a></li>
     <li><a href="#code-challenge-template">Code Challenge Template</a></li>
-
-
   </ul>
 </details>
 <br /><br />
@@ -242,6 +241,42 @@ const factorial = n => {
     }
     return n * factorial(n - 1); 
 }
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### High and Low
+
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Examples:
+```sh
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+```
+Notes
+
+* All numbers are valid `Int32`, no need to validate them.
+* There will always be at least one number in the input string.
+* Output string must be two numbers separated by a single space, and highest number is first.
+<br /><br />
+
+First solution:
+
+```sh
+/**
+ * Description goes here...
+ * @param {*} - 
+ * @param {*} - 
+ * @returns {*} -  
+ */
+```
+
+Refactored solution:
+
+```sh
+Code goes here...
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
