@@ -14,7 +14,10 @@ For practice and learning.
     <li><a href="#fizzbuzz-backwards">FizzBuzz Backwards</a></li>
     <li><a href="#square-every-digit">Square Every Digit</a></li>
     <li><a href="#reverse-words">Reverse Words</a></li>
-    <li><a href="#code-challenge">Code Challenge</a></li>
+    <li><a href="#factorial">Factorial</a></li>
+    <li><a href="#code-challenge-template">Code Challenge Template</a></li>
+
+
   </ul>
 </details>
 <br /><br />
@@ -165,6 +168,37 @@ let strArr = str
 
 return strArr;
 };
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Factorial
+
+In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example: 5! = 5 * 4 * 3 * 2 * 1 = 120. By convention the value of 0! is 1.
+
+Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of type ArgumentOutOfRangeException (C#) or IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError (JavaScript) or ValueError (Python) or return -1 (C).
+
+More details about factorial can be found [here](https://www.wikiwand.com/en/Factorial).
+<br /><br />
+
+First solution:
+
+```sh
+/**
+ * Calculate factorial for a given input.
+ * @param {number} - The input is a positive integer between 0 and 12
+ * @returns {number} - Positive integer  
+ */
+
+ const factorial = n => {
+
+ };
+```
+
+Refactored solution:
+
+```sh
+Code goes here...
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
