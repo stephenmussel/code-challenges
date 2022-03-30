@@ -16,6 +16,7 @@ For practice and learning.
     <li><a href="#reverse-words">Reverse Words</a></li>
     <li><a href="#factorial">Factorial</a></li>
     <li><a href="#high-and-low">High and Low</a></li>
+    <li><a href="#testing-1-2-3">Testing 1-2-3</a></li>
     <li><a href="#code-challenge-template">Code Challenge Template</a></li>
   </ul>
 </details>
@@ -307,9 +308,19 @@ const highAndLow = str => {
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Code Challenge Template
+### Testing 1-2-3
 
-Description goes here...
+Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+The numbering starts at 1. The format is `n: string`. Notice the colon and space in between.
+
+Examples:
+```
+number([]) // => []
+number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
+```
 <br /><br />
 
 First solution:
