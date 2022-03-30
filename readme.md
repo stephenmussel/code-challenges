@@ -31,7 +31,7 @@ The Fizz and Buzz numbers will always be integers between 1 and 50, and the sequ
 
 First solution:
 
-  ```sh
+  ```
 /**
  * Finds the numbers whose multiples are being replaced by Fizz and Buzz
  * @param {Array} arr - Array of numbers and strings
@@ -49,21 +49,21 @@ let f = arr.indexOf('Fizz');
 let b = arr.indexOf('Buzz');
 let fb = arr.indexOf('FizzBuzz');
 
-if(arr[0] === 'FizzBuzz') { // found FizzBuzz
-  result = [1, 1];
-}
+  if(arr[0] === 'FizzBuzz') { // found FizzBuzz
+    result = [1, 1];
+  }
 
-if(f !== -1) { // found Fizz
-  result.push(f + 1);
-} else if(f === -1) { // did not find Fizz
-  result.push(fb + 1);
-}
+  if(f !== -1) { // found Fizz
+    result.push(f + 1);
+  } else if(f === -1) { // did not find Fizz
+    result.push(fb + 1);
+  }
 
-if(b !== -1) { // found Buzz
-  result.push(b + 1);
-} else if(b === -1) { // did not find Buzz
-  result.push(fb + 1);
-}
+  if(b !== -1) { // found Buzz
+    result.push(b + 1);
+  } else if(b === -1) { // did not find Buzz
+    result.push(fb + 1);
+  }
 
 return result;
 };
@@ -74,7 +74,7 @@ console.log(reverseFizzBuzz(arr2)); // [1, 6]
 
 Refactored solution:
 
-```sh
+```
 const reverseFizzBuzz = arr => {
 
 // truthy: if found, f = value at index and if not found, f = value at index of FizzBuzz  
@@ -96,7 +96,7 @@ Note: the function accepts an integer and returns an integer.
 
 First solution:
 
-```sh
+```
 /**
  * Square every digit of a number and concatenate them
  * @param {number} num - Integer
@@ -132,7 +132,7 @@ console.log(squareDigits(-96)); // 8136
 
 First solution:
 
-```sh
+```
 /**
  * Reverse each word in a string and spaces should be retained
  * @param {string} - String
@@ -155,15 +155,15 @@ console.log(reverseWords('This is an example!')); // sihT si na !elpmaxe
 
 Refactored solution:
 
-```sh
+```
 const reverseWords = str => {
 let strArr = str
-    .split(' ') // returns array of words
-    .map(word => word // loops thru array
-        .split('') // returns array of an array of characters
-        .reverse() // reverses order of characters
-        .join('')) // joins characters to form array of words
-        .join(' '); // joins array of words to form string
+  .split(' ') // returns array of words
+  .map(word => word // loops thru array
+    .split('') // returns array of an array of characters
+    .reverse() // reverses order of characters
+    .join('')) // joins characters to form array of words
+    .join(' '); // joins array of words to form string
 
 return strArr;
 };
@@ -182,7 +182,7 @@ More details about factorial can be found [here](https://www.wikiwand.com/en/Fac
 
 First solution:
 
-```sh
+```
 /**
  * Calculate factorial for a given input.
  * @param {number} - The input is a positive integer between 0 and 12
@@ -199,14 +199,14 @@ const factorial = n => {
 
 let result = [];
 
-    if(!(n >= 0 && n<= 12)) {
-        throw new RangeError('The argument must be between 0 and 12.')
-    } else if( n === 0) {
-        result.push(1);
-    }
-    for(let i = n; i >= 1; i--) {
-        result.push(i);
-    }
+  if(!(n >= 0 && n<= 12)) {
+      throw new RangeError('The argument must be between 0 and 12.')
+  } else if( n === 0) {
+      result.push(1);
+  }
+  for(let i = n; i >= 1; i--) {
+      result.push(i);
+  }
 
 return result.reduce((a, b) => a * b);
 };
@@ -220,26 +220,29 @@ console.log(factorial(5)); // 120
 
 Refactored solution:
 
-```sh
+```
 Case for recursion?
 
 const countDown = n => {
-    console.log(n);
-    let newNum = n - 1;
-    if(newNum > 0) {
-        countDown(newNum)
-    }
+  
+  console.log(n);
+  
+  let newNum = n - 1;
+  
+  if(newNum > 0) {
+      countDown(newNum)
+  }
 }
 
 Recursion applied:
 
 const factorial = n => {
-    if (n < 0 || n > 12) {
-        throw new RangeError();
-    } else if(n === 0) {
-        return 1;
-    }
-    return n * factorial(n - 1); 
+  if (n < 0 || n > 12) {
+      throw new RangeError();
+  } else if(n === 0) {
+      return 1;
+  }
+  return n * factorial(n - 1); 
 }
 ```
 
@@ -250,7 +253,7 @@ const factorial = n => {
 In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 
 Examples:
-```sh
+```
 highAndLow("1 2 3 4 5");  // return "5 1"
 highAndLow("1 2 -3 4 5"); // return "5 -3"
 highAndLow("1 9 3 4 -5"); // return "9 -5"
@@ -264,7 +267,54 @@ Notes
 
 First solution:
 
-```sh
+```
+/**
+ * Return highest and lowest number from a string of numbers
+ * @param {string} - The input string will have at least one number
+ * @returns {string} - String with two numbers separated by space w/highest number first  
+ */
+
+const highAndLow = str => {
+
+  let arr = str.split(' ');
+  let hi = Math.max(...arr);
+  let lo = Math.min(...arr);
+
+  // always at least one number in string;
+    if(arr.length === 1) {
+      arr.push(str);
+      
+      // returns 2 numbers separated by space with high first
+      return arr.join(' ');
+    }
+  // returns 2 numbers separated by space with high first
+  return (`${hi} ${lo}`);
+};
+```
+
+Refactored solution:
+
+```
+const highAndLow = str => {
+        
+  let arr = str.split(' ');
+  let hi = Math.max(...arr);
+  let lo = Math.min(...arr);
+
+  return arr.length === 1 ? str + ' ' + str : hi + ' ' + lo;
+};
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Code Challenge Template
+
+Description goes here...
+<br /><br />
+
+First solution:
+
+```
 /**
  * Description goes here...
  * @param {*} - 
@@ -288,7 +338,7 @@ Description goes here...
 
 First solution:
 
-```sh
+```
 /**
  * Description goes here...
  * @param {*} - 
@@ -304,4 +354,5 @@ Code goes here...
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
