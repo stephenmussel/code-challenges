@@ -20,18 +20,19 @@
 //         return arr;
 //     }
 
-//     // for(let each of arr) {
-//     //     let el = `${counter}: ${each}`;
-//     //     counter++;
-//     //     result.push(el);
-//     // }
+//     for(let each of arr) {
+//         let el = `${counter}: ${each}`;
+//         counter++;
+//         result.push(el);
+//     }
         
 //     return result;
 // };
 
 // ++c => increment then assign => 1, 2, 3
 // c++ => assign the increment => 0, 1, 2
-const number = arr => arr.map((v, c) => `${++c}: ${v}`);
+// const number = arr => arr.map((v, c) => `${++c}: ${v}`);
+const number = arr => arr.map((v, c) => `${c + 1}: ${v}`);
 
 
 console.log(number([])); // []
