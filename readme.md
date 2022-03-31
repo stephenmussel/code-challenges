@@ -332,6 +332,25 @@ First solution:
  * @param {*} - 
  * @returns {*} -  
  */
+
+ const number = arr => {
+
+  let result = [];
+  let counter = 1;
+
+  // empty array should return empty array
+  if(arr.length === 0) {
+      return arr;
+  }
+
+  for(let each of arr) {
+      let el = `${counter}: ${each}`;
+      counter++;
+      result.push(el);
+  }
+      
+  return result;
+};
 ```
 
 Refactored solution:
