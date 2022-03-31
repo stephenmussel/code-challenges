@@ -355,9 +355,12 @@ First solution:
 
 Refactored solution:
 
-```sh
-Code goes here...
 ```
+Learned something new!
+
+// ++c => increment then assign => 1, 2, 3
+// c++ => assign the increment => 0, 1, 2
+const number = arr => arr.map((v, c) => `${++c}: ${v}`);```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

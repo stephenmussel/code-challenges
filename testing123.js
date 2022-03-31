@@ -10,27 +10,31 @@
 // number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
 
 
-const number = arr => {
+// const number = arr => {
 
-    let result = [];
-    let counter = 1;
+//     let result = [];
+//     let counter = 1;
 
-    // empty array should return empty array
-    if(arr.length === 0) {
-        return arr;
-    }
+//     // empty array should return empty array
+//     if(arr.length === 0) {
+//         return arr;
+//     }
 
-    for(let each of arr) {
-        let el = `${counter}: ${each}`;
-        counter++;
-        result.push(el);
-    }
+//     // for(let each of arr) {
+//     //     let el = `${counter}: ${each}`;
+//     //     counter++;
+//     //     result.push(el);
+//     // }
         
-    return result;
-};
+//     return result;
+// };
+
+// ++c => increment then assign => 1, 2, 3
+// c++ => assign the increment => 0, 1, 2
+const number = arr => arr.map((v, c) => `${++c}: ${v}`);
 
 
-// console.log(num([])); // []
+console.log(number([])); // []
 console.log(number(['x', 'y', 'z'])); // ['1: x', '2: y', '3: z']
 
 
