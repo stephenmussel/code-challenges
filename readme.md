@@ -19,6 +19,7 @@ For practice and learning.
     <li><a href="#testing-1-2-3">Testing 1-2-3</a></li>
     <li><a href="#youre-a-square">You're a Square</a></li>
     <li><a href="#remove-the-minimum">Remove the Minimum</a></li>
+    <li><a href="#weird-string-case">WeIrD StRiNg CaSe</a></li>
     <li><a href="#code-challenge-template">Code Challenge Template</a></li>
   </ul>
 </details>
@@ -481,6 +482,43 @@ const removeSmallest = num => {
   
   return newNum;
 };
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### WeIrD StRiNg CaSe
+
+Write a function `toWeirdCase` that accepts a string, and returns the same string with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased and you need to start over for each word.
+
+The passed in string will only consist of alphabetical characters and spaces(`' '`). Spaces will only be present if there are multiple words. Words will be separated by a single space(`' '`).
+
+**Examples:**
+
+```
+toWeirdCase( "String" );//=> returns "StRiNg"
+toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
+```
+<br /><br />
+
+First solution:
+
+```
+/**
+ * Returns a string where all even indexed characters are uppercased 
+ * and odd are lowercased
+ * @param {string} - The input is a string
+ * @returns {string} - The output is a string
+ */
+
+ const weirdString = str => {
+
+ };
+```
+
+Refactored solution:
+
+```
+Code goes here...
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
