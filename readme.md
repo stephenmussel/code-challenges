@@ -444,21 +444,43 @@ First solution:
 
 ```
 /**
- * Description goes here...
- * @param {*} - 
- * @param {*} - 
- * @returns {*} -  
+ * Remove the lowest number and return updated array without mutating the original array
+ * @param {array} - The input is an array of numbers
+ * @returns {array} - The output is an array of numbers
  */
 
- const removeSmallest = num => {
+const removeSmallest = num => {
+
+  // remove smallest value w/o mutating original array
+  // make a copy and find smallest value
+  let newNum = [...num];
+
+  // remove first instance
+  // if you get an empty array return empty array
+  // newNum.indexOf(Math.min(...newNum)); // found index of first instance of lowest number
+
+  newNum.splice(newNum.indexOf(Math.min(...newNum)), 1);
   
- };
+  // return [newNum, num];
+  return newNum;
+};
+
+console.log(removeSmallest([1, 2, 3, 4, 5])); // [2, 3, 4, 5]
+console.log(removeSmallest([5, 3, 2, 1, 4])); // [5, 3, 2, 4]
+console.log(removeSmallest([2, 2, 1, 2, 1])); // [2, 2, 2, 1]
+console.log(removeSmallest([])); // []
 ```
 
 Refactored solution:
 
 ```
-Code goes here...
+const removeSmallest = num => {
+
+  let newNum = [...num];
+  newNum.splice(newNum.indexOf(Math.min(...newNum)), 1);
+  
+  return newNum;
+};
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
