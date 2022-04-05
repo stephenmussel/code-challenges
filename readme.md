@@ -642,7 +642,27 @@ console.log(isbnConverter('963-14-2164-3')); // 978-963-14-2164-4
 Refactored solution:
 
 ```
-Code goes here...
+const isbnConverter = isbn => {
+
+  let isbnArr = isbn.split(''); 
+  isbnArr.pop();
+
+  // this value is referenced later
+  let result = isbnArr;
+
+  isbnArr.unshift('9', '7', '8', '-')
+
+  isbnArr = isbnArr.filter(char => char !== '-')
+      .map((v, k) => (k % 2) ? v * 3 : v * 1); 
+
+  let sumArr = isbnArr.reduce((p, c) => p + c);
+
+  let checkDigit = sumArr % 10 ? 10 - (sumArr % 10) : 0;
+
+  result.push(checkDigit.toString());
+
+  return result.join('');
+};
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
