@@ -12,15 +12,20 @@ const isbnConverter = isbn => {
 
     // convert to 12 digits
     isbnArr = isbnArr.filter(char => char !== '-'); 
-    console.log(isbnArr.filter(char => char !== '-')); // ['9', '7', '8', '1', '8', '5', '3', '2', '6', '1', '5', '8']
+    // console.log(isbnArr.filter(char => char !== '-')); // ['9', '7', '8', '1', '8', '5', '3', '2', '6', '1', '5', '8']
 
     // alternately multiply each digit from L to R by 1 or 3
     // even index * 1
     // odd index * 3
     isbnArr = isbnArr.map((v, k) => (k % 2) ? v * 3 : v * 1); 
     console.log(isbnArr); // [9, 21, 8, 3, 8, 15, 3, 6, 6, 3, 5, 24]
+
+    // add up all 12 numbers
+    let sumArr = isbnArr.reduce((p, c) => p + c);
+    console.log(sumArr); // 111
     
-    return isbnArr;
+    
+    // return isbnArr;
 };
 
 console.log(isbnConverter('1-85326-158-0')); // 978-1-85326-158-9
