@@ -6,6 +6,10 @@ const isbnConverter = isbn => {
     isbnArr.pop(); // ['0']
     // console.log(isbnArr); // ['1', '-', '8', '5','3', '2', '6', '-','1', '5', '8', '-']
 
+    // add prefix: 978
+    isbnArr.unshift('978', '-')
+    // console.log(isbnArr); // ['978', '-', '1', '-', '8', '5','3', '2', '6', '-','1', '5', '8', '-']
+
     return isbnArr.join('');
 };
 
