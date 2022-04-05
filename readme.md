@@ -510,9 +510,18 @@ First solution:
  * @returns {string} - The output is a string
  */
 
- const weirdString = str => {
+const weirdCase = str => {
+  let arr = str.split(' ');
+  // console.log(arr); // ['Weird', 'string', 'cAse']
 
- };
+  arr = [...arr].map(word => ([...word].map((char, index) => index % 2 ? char.toLowerCase() : char.toUpperCase()).join('')));
+  console.log(arr); // cases changed properly but still an array of strings...then joined
+
+  return arr = arr.join(' ');
+}
+
+console.log(weirdCase('string')); // StRiNg
+console.log(weirdCase('Weird string cAse')); // WeIrD StRiNg CaSe
 ```
 
 Refactored solution:
