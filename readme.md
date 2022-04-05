@@ -96,7 +96,7 @@ return [f, b];
 Square every digit of a number and concatenate them. For example, if we run 9119 through the function, 811181 will come out. 
 
 Note: the function accepts an integer and returns an integer.
-<br /><br />
+<br />
 
 First solution:
 
@@ -132,7 +132,7 @@ console.log(squareDigits(-96)); // 8136
 ### Reverse Words
 
   Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
-  <br /><br />
+  <br />
 
 First solution:
 
@@ -182,7 +182,7 @@ In mathematics, the factorial of a non-negative integer n, denoted by n!, is the
 Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of type ArgumentOutOfRangeException (C#) or IllegalArgumentException (Java) or RangeException (PHP) or throw a RangeError (JavaScript) or ValueError (Python) or return -1 (C).
 
 More details about factorial can be found [here](https://www.wikiwand.com/en/Factorial).
-<br /><br />
+<br />
 
 First solution:
 
@@ -267,7 +267,7 @@ Notes
 * All numbers are valid `Int32`, no need to validate them.
 * There will always be at least one number in the input string.
 * Output string must be two numbers separated by a single space, and highest number is first.
-<br /><br />
+<br />
 
 First solution:
 
@@ -324,7 +324,7 @@ Examples:
 number([]) // => []
 number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
 ```
-<br /><br />
+<br />
 
 First solution:
 
@@ -390,7 +390,7 @@ The tests will always use some integral number, so don't worry about that in dyn
 25  =>  true
 26  =>  false
 ```
-<br /><br />
+<br />
 
 First solution:
 
@@ -439,7 +439,7 @@ Don't change the order of the elements that are left.
 * Input: [5,3,2,1,4], output = [5,3,2,4]
 * Input: [2,2,1,2,1], output = [2,2,2,1]
 ```
-<br /><br />
+<br />
 
 First solution:
 
@@ -498,7 +498,7 @@ The passed in string will only consist of alphabetical characters and spaces(`' 
 toWeirdCase( "String" );//=> returns "StRiNg"
 toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
 ```
-<br /><br />
+<br />
 
 First solution:
 
@@ -527,7 +527,15 @@ console.log(weirdCase('Weird string cAse')); // WeIrD StRiNg CaSe
 Refactored solution:
 
 ```
-Code goes here...
+const weirdCase = str => {
+  let arr = str.split(' ')
+    .map(word => ([...word]
+      .map((char, index) => 
+        index % 2 ? char.toLowerCase() : char.toUpperCase())
+        .join('')));
+
+  return arr.join(' ');
+}
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -535,7 +543,7 @@ Code goes here...
 ### Code Challenge Template
 
 Description goes here...
-<br /><br />
+<br />
 
 First solution:
 

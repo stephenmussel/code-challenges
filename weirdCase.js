@@ -16,14 +16,24 @@
 //     return arr;
 // };
 
+// const weirdCase = str => {
+//     let arr = str.split(' ');
+//     // console.log(arr); // ['Weird', 'string', 'cAse']
+
+//     arr = [...arr].map(word => ([...word].map((char, index) => index % 2 ? char.toLowerCase() : char.toUpperCase()).join('')));
+//     console.log(arr); // cases changed properly but still an array of strings...then joined
+
+//     return arr = arr.join(' ');
+// }
+
 const weirdCase = str => {
-    let arr = str.split(' ');
-    // console.log(arr); // ['Weird', 'string', 'cAse']
+    let arr = str.split(' ')
+        .map(word => ([...word]
+            .map((char, index) => 
+                index % 2 ? char.toLowerCase() : char.toUpperCase())
+                .join('')));
 
-    arr = [...arr].map(word => ([...word].map((char, index) => index % 2 ? char.toLowerCase() : char.toUpperCase()).join('')));
-    console.log(arr); // cases changed properly but still an array of strings...then joined
-
-    return arr = arr.join(' ');
+    return arr.join(' ');
 }
 
 console.log(weirdCase('string')); // StRiNg
