@@ -10,6 +10,10 @@ const isbnConverter = isbn => {
     isbnArr.unshift('978', '-')
     // console.log(isbnArr); // ['978', '-', '1', '-', '8', '5','3', '2', '6', '-','1', '5', '8', '-']
 
+    // convert to 12 digits
+    isbnArr = isbnArr.filter(char => char !== '-');
+    // console.log(isbnArr.filter(char => char !== '-').join('')); // 978185326158
+
     return isbnArr.join('');
 };
 
