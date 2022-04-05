@@ -1,0 +1,3 @@
+const hypertensive = patients => {
+
+};
