@@ -30,20 +30,18 @@ const isbnConverter = isbn => {
     // perfom modulo 10 division
     // if 0 then check digit is 0
     // else subtract result from 10
-    console.log(sumArr % 10 === 0 ?  0 : 10 - (sumArr % 10)); // check digit is 9
+    // console.log(sumArr % 10 === 0 ?  0 : 10 - (sumArr % 10)); // check digit is 9
     let checkDigit = sumArr % 10 === 0 ?  0 : 10 - (sumArr % 10);
     
     // add check digit to result from step 3
-    console.log(result); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-']
+    // console.log(result); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-']
     result.push(checkDigit.toString());
-    console.log(result); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-', '9']
+    // console.log(result); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-', '9']
     
-    
-    
-    // return isbnArr;
+    return result.join('');
 };
 
 console.log(isbnConverter('1-85326-158-0')); // 978-1-85326-158-9
-// console.log(isbnConverter('0-14-143951-3')); // 978-0-14-143951-8
-// console.log(isbnConverter('0-02-346450-X')); // 978-0-02-346450-8
-// console.log(isbnConverter('963-14-2164-3')); // 978-963-14-2164-4
+console.log(isbnConverter('0-14-143951-3')); // 978-0-14-143951-8
+console.log(isbnConverter('0-02-346450-X')); // 978-0-02-346450-8
+console.log(isbnConverter('963-14-2164-3')); // 978-963-14-2164-4
