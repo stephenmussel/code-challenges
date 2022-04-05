@@ -18,11 +18,17 @@ const isbnConverter = isbn => {
     // even index * 1
     // odd index * 3
     isbnArr = isbnArr.map((v, k) => (k % 2) ? v * 3 : v * 1); 
-    console.log(isbnArr); // [9, 21, 8, 3, 8, 15, 3, 6, 6, 3, 5, 24]
+    // console.log(isbnArr); // [9, 21, 8, 3, 8, 15, 3, 6, 6, 3, 5, 24]
 
     // add up all 12 numbers
     let sumArr = isbnArr.reduce((p, c) => p + c);
-    console.log(sumArr); // 111
+    // console.log(sumArr); // 111
+
+    // perfom modulo 10 division
+    // if 0 then check digit is 0
+    // else subtract result from 10
+    console.log(sumArr % 10 === 0 ?  0 : 10 - (sumArr % 10)); // check digit is 9
+
     
     
     // return isbnArr;
