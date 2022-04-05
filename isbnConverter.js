@@ -6,6 +6,9 @@ const isbnConverter = isbn => {
     isbnArr.pop(); // ['0']
     // console.log(isbnArr); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-']
 
+    // this value is referenced later
+    let result = isbnArr;
+
     // add prefix: 978
     isbnArr.unshift('9', '7', '8', '-')
     // console.log(isbnArr); // ['9', '7', '8', '-', '1', '-', '8', '5', '3', '2', '6', '-','1', '5', '8', '-']
@@ -28,7 +31,13 @@ const isbnConverter = isbn => {
     // if 0 then check digit is 0
     // else subtract result from 10
     console.log(sumArr % 10 === 0 ?  0 : 10 - (sumArr % 10)); // check digit is 9
-
+    let checkDigit = sumArr % 10 === 0 ?  0 : 10 - (sumArr % 10);
+    
+    // add check digit to result from step 3
+    console.log(result); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-']
+    result.push(checkDigit.toString());
+    console.log(result); // ['1', '-', '8', '5','3', '2', '6', '-', '1', '5', '8', '-', '9']
+    
     
     
     // return isbnArr;
