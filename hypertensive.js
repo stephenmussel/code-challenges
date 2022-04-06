@@ -14,10 +14,22 @@ Return the number of patents that meet any of the above hypertension definitions
 
 const hypertensive = patients => {
 
+    let newPatients = [...patients];
+    let validArr = [];
+
     // Average of all measured systolic pressures >= 140 mmHg. Must have minumum of 2 measurements.
     // if(arr.length > 1); // meets 2 min measurement requirement
     // parseInt(arr.reduce((p, c) => (p + c))/arr.length) >= 140; // calculates avg and compares to 140
+    for(let patient of newPatients) {
+        // console.log(patient);
+        if(patient.length > 1) {
+            validArr.push(patient);
+            console.log('validArr: ', validArr);
 
+                          
+        }
+        
+    }
     
     // Average of all measured diastolic presures >= 90 mmHg. Must have minimum of 2 measurements.
     // if(arr.length > 1); // meets 2 min measurement requirement
@@ -28,7 +40,7 @@ const hypertensive = patients => {
     // if(s >= 180 && d >= 110)
 
     
-    return avg;
+    // return patients;
     // return sum;
 
 };
@@ -38,7 +50,7 @@ const hypertensive = patients => {
 // [[patient measurement1, patient measurement2]...]
 const test = [
     ["130/80","140/94"],
-    // ["160/110"],
+    ["160/110"],
 ];
 
 const x = [
