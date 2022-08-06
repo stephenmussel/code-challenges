@@ -63,4 +63,4 @@ function likes(names) {
     }
 }
 
-console.log(likes(nF));``
+console.log(likes(nF));
