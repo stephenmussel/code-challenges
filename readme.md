@@ -23,8 +23,6 @@ For practice and learning.
     <li><a href="#diagnosing-hypertension">Diagnosing Hypertension</a></li>
     <li><a href="#convert-isbn-10-to-isbn-13">Convert ISBN-10 to ISBN-13</a></li>
     <li><a href="#who-likes-it">Who Likes It</a></li>
-    
-
     <li><a href="#code-challenge-template">Code Challenge Template</a></li>
   </ul>
 </details>
