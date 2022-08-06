@@ -16,6 +16,13 @@ const hypertensive = patients => {
 
     let newPatients = [...patients];
     let validArr = [];
+    let sArr = 0;
+    let dArr = 0;
+    let counter = 0;
+
+    const avgD = v => {
+        return v;
+    }
 
     // Average of all measured systolic pressures >= 140 mmHg. Must have minumum of 2 measurements.
     // if(arr.length > 1); // meets 2 min measurement requirement
@@ -24,7 +31,24 @@ const hypertensive = patients => {
         // console.log(patient);
         if(patient.length > 1) {
             validArr.push(patient);
-            console.log('validArr: ', validArr);
+            // console.log('validArr: ', validArr);
+
+            for(let record of patient) {
+                // console.log(record);
+
+                record = record.split('/')
+                // console.log(record);
+
+                for(let result of record) {
+                    // console.log('result: ', result);
+
+                    console.log(record.map((v, k) => k % 2 ? avgD(v) : `this is s: ${v}`));
+                    
+                }
+                
+
+                
+            }  
 
                           
         }
