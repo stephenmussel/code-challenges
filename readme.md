@@ -24,6 +24,7 @@ For practice and learning.
     <li><a href="#convert-isbn-10-to-isbn-13">Convert ISBN-10 to ISBN-13</a></li>
     <li><a href="#who-likes-it">Who Likes It</a></li>
     <li><a href="#your-order-please">Your Order Please</a></li>
+    <li><a href="#rotate-right">Rotate Right</a></li>
     <li><a href="#code-challenge-template">Code Challenge Template</a></li>
   </ul>
 </details>
@@ -880,6 +881,68 @@ function order(words) {
   }
   return sorted.join(' ');
 }
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Rotate Right
+
+Implement a function that returns an updated array with r right rotations 
+on an array of integers a .
+
+Example:
+
+```
+Given the following array: [2,3,4,5,7]
+
+Perform 3 right rotations:
+First rotation : [7,2,3,4,5] , Second rotation : [5,7,2,3,4] and, Third rotation: [4,5,7,2,3]
+
+return [4,5,7,2,3]
+```
+<br />
+
+First solution:
+
+```
+/**
+ * Description goes here...
+ * @param {array} - The input is an array
+ * @param {number} - The input the rotation as a number
+ * @returns {array} -  The output is an array of numbers
+ */
+
+let arrA = [];
+let arrB = [2, 3, 4, 5, 7];
+
+function rotateRight(arr, rotations) {
+
+    // checks for empty []
+    if (arr.length === 0) {
+        return 'the array is empty!';
+
+    // alerts that array would not change
+    } else if (arr.length === rotations) {
+        console.log(`you're back where you started!`);
+        return arr;
+    }
+
+    for (let i = 0; i < rotations; i++) {
+        let el = arr.pop(); // el to rotate
+        arr.unshift(el); // el rotated to right/front
+    }
+    return arr;
+}
+
+// console.log(rotateRight(arrB, 1)); // [7,2,3,4,5]
+// console.log(rotateRight(arrB, 4)); // [3,4,5,7,2]
+console.log(rotateRight(arrB, 5)); // [2,3,4,5,7]
+```
+
+Refactored solution:
+
+```
+Code goes here...
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
